@@ -16,7 +16,8 @@ def login(username, password):
 
 
 def calculate_average(numbers):
-    # 3️⃣ Runtime Risk – Division by zero possible
+    if not numbers:
+        raise ValueError("Cannot calculate average of empty list")
     return sum(numbers) / len(numbers)
 
 
